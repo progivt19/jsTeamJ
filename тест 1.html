@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Игра угадай число</title>
+<body onload="init()">
+
+    <div id="container">
+        <div class="panel">
+            <h2>У меня есть случайное число<br>от 1-100 </h2>
+            <h3>Сможешь ли ты угадать?</h3><hr>
+
+            <p>Выберите уровень сложности:</p>
+            <button id="easyBtn" onclick="easyMode()" class="">Легкий: Угадать за 10 попыток (по умолчанию)</button>
+            <button id="hardBtn" onclick="hardMode()" class="">Сложный: Угадать за 5 попыток</button>
+            <button id="newGameButton" onclick="newGame()">Начать новую игру</button>
+        </div>
+        <div class="panel">
+            <h3 id="textOutput">Напишите число снизу и нажмите ENTER</h3>
+            <input type="number" id="inputBox" onchange="compareGuess()">
+            <p>Количство попыток : <span id="attempts"></span></p>
+        </div>
+        <div class="panel">
+            <p>Предыдущие ответы:</p>
+            <p id="guessLog"></p>
+        </div>
+    </div>
+    <script  src="app.js"></script>
+    
+</body>
+</html>
